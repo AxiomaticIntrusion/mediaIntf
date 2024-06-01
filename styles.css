@@ -101,6 +101,7 @@ p#subtitle {
     p#subtitle {
         margin-top: 0;
         opacity: 1;
+        font-size: 0.813rem;
         animation: none;
     }
 }
