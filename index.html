@@ -3,119 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalistic Dark Theme</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #2b2b2b;
-            color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-
-        header {
-            width: 100%;
-            background-color: #1a1a1a;
-            padding: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid #444;
-        }
-
-        header img {
-            height: 50px;
-        }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .typewriter, .subheading {
-            font-family: 'Courier New', Courier, monospace;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: .15em solid orange; /* Cursor color */
-        }
-
-        .typewriter {
-            font-size: 2em;
-            animation: typing 1s steps(10, end), blink-caret .75s step-end infinite;
-        }
-
-        .subheading {
-            font-size: 1em;
-            margin-top: 10px;
-            text-decoration: underline;
-            animation: typing-subheading 3s steps(100, end) 1s forwards, blink-caret-subheading .75s step-end infinite 4s;
-            /* 3s typing duration + 1s delay = 4s total */
-            border-right: none;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 10em } /* Adjust this to match the length of "Plex Media" */
-        }
-
-        @keyframes typing-subheading {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: orange; }
-        }
-
-        @keyframes blink-caret-subheading {
-            from, to { border-color: transparent }
-            50% { border-color: orange; }
-        }
-
-        widgetbot {
-            width: 100%;
-            max-width: 800px;
-            height: 600px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            margin-top: 20px;
-        }
-
-        @media (max-width: 600px) {
-            .typewriter {
-                font-size: 1.5em;
-            }
-
-            .subheading {
-                font-size: 0.875em;
-            }
-
-            widgetbot {
-                height: 400px;
-            }
-        }
-    </style>
+    <title>Buchner Media</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
 </head>
 <body>
-    <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Plex_favicon.png" alt="Plex Logo">
+    <header id="header">
+        <h1 id="title">Buchner Media</h1>
+        <p id="subtitle">Click on the chatbar and enter a name | Type Name of Movie or Series with year if possible | e.g Iron Man 2008</p>
     </header>
-    <div class="content">
-        <div class="typewriter">Plex Media</div>
-        <div class="subheading">Click on the chatbar and enter a name | Type Name of Movie or Series with year if possible | e.g Iron Man 2008</div>
+    <div class="widgetbot-container">
         <widgetbot
             server="1241753993072607262"
             channel="1241754606619332648"
@@ -123,6 +20,8 @@
             height="600"
         ></widgetbot>
     </div>
+    <div id="background"></div>
     <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+    <script src="script.js"></script>
 </body>
 </html>
